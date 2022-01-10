@@ -110,7 +110,10 @@ class QuotePage extends StatelessWidget {
         backgroundColor: Colors.black87,
         child: IconButton(
           onPressed: () {
-            Navigator.pushReplacementNamed(context,
+            Navigator.
+            
+            
+            pushReplacementNamed(context,
                LoginPage.routeName);
           },
           icon: const Icon(

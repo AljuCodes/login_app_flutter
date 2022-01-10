@@ -13,6 +13,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
+      theme: ThemeData(
+        fontFamily:'Anton',
+
+      ),
       debugShowCheckedModeBanner: false,
       title: "Login_App",
   initialRoute: LoginPage.routeName,
