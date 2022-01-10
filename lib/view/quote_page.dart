@@ -4,6 +4,7 @@ import 'package:login_app_week_4/view/login_page.dart';
 import 'package:login_app_week_4/widget/quote_tile.dart';
 
 class QuotePage extends StatelessWidget {
+  static const  routeName = "quotePage";
   final List<QuoteTile> s = [
     QuoteTile(
       name: "Elon Musk",
@@ -88,7 +89,7 @@ class QuotePage extends StatelessWidget {
           children: [
             // ignore: sized_box_for_whitespace
             Container(
-              height: 800,
+              height: 750,
               child: ListView.builder(
                 itemCount: s.length,
                 itemBuilder: (ctx, index) {
@@ -100,6 +101,7 @@ class QuotePage extends StatelessWidget {
                 },
               ),
             ),
+    
           ],
         ),
       ),
@@ -108,8 +110,8 @@ class QuotePage extends StatelessWidget {
         backgroundColor: Colors.black87,
         child: IconButton(
           onPressed: () {
-            Navigator.pushReplacement(context,
-                MaterialPageRoute(builder: (context) => const LoginPage()));
+            Navigator.pushReplacementNamed(context,
+               LoginPage.routeName);
           },
           icon: const Icon(
             Icons.logout_sharp,

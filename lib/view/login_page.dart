@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:login_app_week_4/view/quote_page.dart';
 
 class LoginPage extends StatefulWidget {
+    static const String routeName = "loginPage";
   const LoginPage({Key? key}) : super(key: key);
 
   @override
@@ -133,8 +134,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   );
                   print("logged in ");
-                  Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (ctx) => QuotePage()));
+                  Navigator.pushReplacementNamed(context,QuotePage.routeName);
                 }
               },
               child: const Text(
